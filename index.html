@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Suhani Sharma - Maxillofacial Surgeon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f6;
+      color: #4a2c39;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #f4c1c2, #f9e0e2);
+      padding: 2rem 1rem;
+      color: #7a3b4a;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(122,59,74,0.1);
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      user-select: none;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #b85c69;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      box-shadow: 0 3px 6px rgba(184,92,105,0.5);
+    }
+    .btn-primary:hover {
+      background-color: #8e4351;
+      box-shadow: 0 4px 10px rgba(142,67,81,0.6);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(184,92,105,0.2);
+      user-select: none;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #b85c69;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: #6d3b44;
+    }
+    .services h2,
+    .testimonials h2,
+    .contact h2 {
+      font-size: 2rem;
+      color: #b85c69;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-item {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(184,92,105,0.15);
+      transition: transform 0.3s ease;
+      user-select: none;
+    }
+    .service-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(184,92,105,0.25);
+    }
+    .service-item h3 {
+      color: #d97482;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .service-item p {
+      color: #7a4b56;
+      font-size: 1rem;
+    }
+    .testimonials-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background-color: #ffe6eb;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 8px rgba(184,92,105,0.1);
+      font-style: italic;
+      user-select: none;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #b85c69;
+      font-style: normal;
+      text-align: right;
+    }
+    .contact {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(184,92,105,0.15);
+      user-select: none;
+    }
+    .contact p {
+      margin-bottom: 0.75rem;
+      color: #5c3a43;
+    }
+    form {
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #f4c1c2;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #b85c69;
+      background-color: #ffe9f0;
+    }
+    button {
+      background-color: #b85c69;
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      box-shadow: 0 3px 6px rgba(184,92,105,0.5);
+    }
+    button:hover {
+      background-color: #8e4351;
+      box-shadow: 0 4px 10px rgba(142,67,81,0.7);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: #7a3b4a;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text {
+        min-width: 100%;
+      }
+      .about img {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dr. Suhani Sharma</h1>
+    <p>Expert Maxillofacial Surgeon | Restoring Confidence &amp; Health</p>
+    <a href="#contact" class="btn-primary">Book a Consultation</a>
+  </header>
+  <main>
+    <section class="about" id="about">
+    <img src="image.jpg" alt="Female maxillofacial surgeon with dark hair tied in a ponytail smiles warmly while standing in a bright modern clinic. She wears a white medical coat and stethoscope, conveying professionalism and approachability. The clinic environment features medical equipment and framed certificates on the wall, creating a welcoming and trustworthy atmosphere. No visible text in the image." />
+    <div class="about-text">
+      <h2>About Dr. Suhani Sharma</h2>
+      <p>Dr. Suhani Sharma is a board-certified maxillofacial surgeon with over 15 years of experience in advanced facial surgery, dental implants, trauma reconstruction, and corrective jaw surgery. Dedicated to providing personalized care, Dr. Sharma combines advanced technology with compassionate treatment to restore both function and aesthetics.</p>
+    </div>
+  </section>
+
+    <section class="services" id="services">
+      <h2>Services Offered</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>Corrective Jaw Surgery</h3>
+          <p>Improves jaw alignment and function to alleviate pain, improve chewing, and enhance facial harmony.</p>
+        </div>
+        <div class="service-item">
+          <h3>Dental Implant Surgery</h3>
+          <p>Placing titanium implants to replace missing teeth and restore a natural smile.</p>
+        </div>
+        <div class="service-item">
+          <h3>Facial Trauma Reconstruction</h3>
+          <p>Expert treatment for fractures and injuries of the face and jaw, restoring appearance and function.</p>
+        </div>
+        <div class="service-item">
+          <h3>Oral Pathology &amp; Biopsy</h3>
+          <p>Diagnosis and treatment of cysts, tumors, and other oral pathologies with precise biopsy procedures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>What Patients Say</h2>
+      <div class="testimonials-list">
+        <div class="testimonial">"Dr. Sharma changed my life with her expert care. My jaw pain is gone, and my smile looks amazing!" <strong>- Mary A.</strong></div>
+        <div class="testimonial">"Professional, kind, and knowledgeable. The whole team made me feel comfortable during my surgery." <strong>- James R.</strong></div>
+        <div class="testimonial">"Highly recommend Dr. Sharma for any facial surgery needs. Very skilled and caring surgeon." <strong>- Lisa M.</strong></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact &amp; Consultation</h2>
+      <p><strong>Address:</strong> 123 Medical Lane, Suite 101, YourCity, YC 12345</p>
+      <p><strong>Phone:</strong> (555) 123-4567</p>
+      <p><strong>Email:</strong> info@drsuhaanisharma.com</p>
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formMessage" style="margin-top: 1rem; color: #b85c69;"></p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Dr. Suhani Sharma Maxillofacial Surgery. All rights reserved.
+  </footer>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formMessage = document.getElementById('formMessage');
+      formMessage.textContent = 'Thank you for your message. We will get back to you shortly.';
+      form.reset();
+    }
+  </script>
+</body>
+</html>
+
